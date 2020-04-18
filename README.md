@@ -2,4 +2,4 @@
 Recurrent Neural Network based Hate Speech Language Model for Korean Hate Speech Detection
 
 web service available: https://hate-speech-main-c2eedpqzcq-an.a.run.app
-demo video: https://www.youtube.com/watch?v=HnhS6BgmcDg
+<br>demo video: https://www.youtube.com/watch?v=HnhS6BgmcDg
