@@ -1,0 +1,21 @@
+name: hate_env
+dependencies:
+  - nomkl
+  - python=3.7
+  - pip
+  - pip:
+    - Flask==1.1.2
+    - gunicorn==20.0.4
+    - grpcio==1.27.2
+    - h5py==2.10.0
+    - Jinja2==2.11.1
+    - Keras==2.3.1
+    - Keras-Applications==1.0.8
+    - Keras-Preprocessing==1.1.0
+    - numpy==1.18.1
+    - requests==2.23.0
+    - tensorboard==1.14.0
+    - tensorflow==1.14.0
+    - tensorflow-estimator==1.14.0
+    - urllib3==1.25.8
+    - Werkzeug==1.0.0

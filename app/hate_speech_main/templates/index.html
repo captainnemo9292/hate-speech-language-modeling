@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="Salfia.co">데모 영상</a></li>
+        <li><a href="{{ url_for('input_page') }}">텍스트 입력</a></li>
+        <li><a href="{{ url_for('scrape_page') }}">URL 입력</a></li>
+        <li><a href="Salfia.co">Github</a></li>
+        <li><a href="Salfia.co">딥러닝 모델</a></li>
+        <li class="slide"></li>
+      </ul>
+    </nav>
+    <section>
+      <div class="title"><span><p style="font-size:60px;  font-weight: 900;">혐오 발언 탐지기</p><p style="font-size:24px;  font-weight: 300;">인공지능을 활용하여 온라인 혐오 표현을 감지합니다. 직접 텍스트를 작성하거나 웹페이지 URL을 입력하면 글에 숨어있는 혐오 표현을 분석합니다.</p></span></div>
+
+    </section>
+    <form action="{{ url_for('scrape_page') }}">
+      <button>scrape</button>
+    </form>
+    <form action="{{ url_for('input_page') }}">
+      <button>input</button>
+    </form>
+  </body>
+</html>

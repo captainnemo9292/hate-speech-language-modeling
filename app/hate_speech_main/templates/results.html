@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/results.css') }}">
+  </head>
+  <body>
+    <div class="table-users">
+       <div class="header">분석 결과</div>
+       <table cellspacing="0">
+        {% if activation %}
+          <tr>
+             <th>아이콘</th>
+             <th width="500">혐오 발언</th>
+             <th width="500">차별 대상</th>
+          </tr>
+          {% for pair in sentence_pairs %}
+          <tr>
+              {% if pair['label'] == "특정 지역에 대한 차별적 발언" %}
+              <td><img src="{{ url_for('static', filename='images/regional.png') }}" alt="Eucalyp from Flaticon" /></td>
+              {% elif pair['label'] == "정치적 성향이 다른 사람들에 대한 혐오 및 왜곡" %}
+              <td><img src="{{ url_for('static', filename='images/political.png') }}" alt="Nikita Golubev from Flaticon" /></td>
+              {% elif pair['label'] == "다른 나라에 대한 차별적 발언" %}
+              <td><img src="{{ url_for('static', filename='images/foreign.png') }}" alt="Smashicons from Flaticon" /></td>
+              {% elif pair['label'] == "여성 및 성소수자에 대한 혐오 및 왜곡" %}
+              <td><img src="{{ url_for('static', filename='images/gender.png') }}" alt="Freepik from Flaticon" /></td>
+              {% endif %}
+              <td>{{ pair['sentence'] }}</td>
+              <td>{{ pair['label'] }}</td>
+          </tr>
+          {% endfor %}
+        {% else %}
+          <th>정상</th>
+        {% endif %}
+        </table>
+        </div>
+  </body>
+</html>

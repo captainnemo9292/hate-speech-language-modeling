@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/page.css') }}">
+  </head>
+  <body style="background-color:#3D3D3D">
+    <div class="container-contact100">
+
+  		<div class="wrap-contact100">
+  			<form  action="{{ url_for('scrape') }}" class="contact100-form validate-form" method="post">
+  				<span class="contact100-form-title">
+  				  URL을 입력하면 웹페이지에 숨어있는 혐오 표현을 분석합니다
+  				</span>
+
+  				<div class="wrap-input100 validate-input" data-validate="Please enter your name">
+  					<input class="input100" type="text" name="url" placeholder="분석할 웹페이지의 URL을 입력하세요...">
+  					<span class="focus-input100"></span>
+  				</div>
+
+  				<div class="container-contact100-form-btn">
+  					<button class="contact100-form-btn">
+  						<span>
+  							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+  							제출
+  						</span>
+  					</button>
+  				</div>
+  			</form>
+  		</div>
+  	</div>
+  </body>
+</html>
